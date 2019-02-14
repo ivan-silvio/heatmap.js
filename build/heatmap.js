@@ -21,7 +21,7 @@
 
 // Heatmap Config stores default values and will be merged with instance config
 var HeatmapConfig = {
-  defaultRadius: 400,
+  defaultRadius: 40,
   defaultRenderer: 'canvas2d',
   defaultGradient: { 0.25: "rgb(0,0,255)", 0.55: "rgb(0,255,0)", 0.85: "yellow", 1.0: "rgb(255,0,0)"},
   defaultMaxOpacity: 10,
@@ -38,8 +38,8 @@ var Store = (function StoreClosure() {
     this._coordinator = {};
     this._data = [];
     this._radi = [];
-    this._min = 10;
-    this._max = 100;
+    this._min = 1;
+    this._max = 50;
     this._xField = config['xField'] || config.defaultXField;
     this._yField = config['yField'] || config.defaultYField;
     this._valueField = config['valueField'] || config.defaultValueField;
