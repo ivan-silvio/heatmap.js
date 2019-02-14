@@ -24,8 +24,8 @@ var HeatmapConfig = {
   defaultRadius: 40,
   defaultRenderer: 'canvas2d',
   defaultGradient: { 0.25: "rgb(0,0,255)", 0.55: "rgb(0,255,0)", 0.85: "yellow", 1.0: "rgb(255,0,0)"},
-  defaultMaxOpacity: 10,
-  defaultMinOpacity: 1,
+  defaultMaxOpacity: 1,
+  defaultMinOpacity: 0,
   defaultBlur: .85,
   defaultXField: 'x',
   defaultYField: 'y',
@@ -39,7 +39,7 @@ var Store = (function StoreClosure() {
     this._data = [];
     this._radi = [];
     this._min = 1;
-    this._max = 50;
+    this._max = 10;
     this._xField = config['xField'] || config.defaultXField;
     this._yField = config['yField'] || config.defaultYField;
     this._valueField = config['valueField'] || config.defaultValueField;
